@@ -8,7 +8,8 @@
     "format:write": "prettier --write \"**/*.{css,js,json,jsx,ts,tsx}\"",
     "format": "prettier \"**/*.{css,js,json,jsx,ts,tsx}\"",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "capacitor:copy:after": "mkdir $CAPACITOR_PLATFORM_NAME/App/App/public/_next && cp -R .next/static $CAPACITOR_PLATFORM_NAME/App/App/public/_next/static"
   },
   "dependencies": {
     "@capacitor/core": "^5.0.5",
