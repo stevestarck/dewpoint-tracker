@@ -1,10 +1,14 @@
 {
-  "name": "precedent",
+  "name": "dewpoint-tracker",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:web": "echo NEXT_PUBLIC_PLATFORM=web > .env; next build; next dev",
+    "dev:ios": "echo NEXT_PUBLIC_PLATFORM=ios > .env; next build; npx cap run ios ",
     "build": "next build",
+    "build:web": "echo NEXT_PUBLIC_PLATFORM=web > .env; next build",
+    "build:ios": "echo NEXT_PUBLIC_PLATFORM=ios > .env; next build",
     "format:write": "prettier --write \"**/*.{css,js,json,jsx,ts,tsx}\"",
     "format": "prettier \"**/*.{css,js,json,jsx,ts,tsx}\"",
     "start": "next start",
